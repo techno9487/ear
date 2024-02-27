@@ -1,5 +1,8 @@
 ```markdown
 # Elastic Artifact Registry 
+Pre-Packaged at Docker Hub:
+
+docker pull charliek17/ear:8.12.2
 
 Nginx based container that serves Elastic Artifacts within an airgapped envrioment. 
 
