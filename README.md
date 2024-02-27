@@ -1,4 +1,9 @@
 ```markdown
+# Elastic Artifact Registry 
+
+Nginx based container that serves Elastic Artifacts within an airgapped envrioment. 
+
+
 # Using Docker
 
 This guide demonstrates how to create a run a Docker container to host elastic artifacts.
@@ -12,6 +17,14 @@ Before you begin, ensure you have the following installed on your system:
 - docker-compose
 
 ## Steps
+
+# Build image on internet facing machine.
+
+Example Build command:
+
+''' docker build --pull --rm -f "artifact.Dockerfile" -t artifactrepo:8.12.2-1 "." '''
+
+# Import image into envrioment
 
 1. Please ensure you name your certs the following, within you certs volume:
 -  els.crt 
