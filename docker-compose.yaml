@@ -1,0 +1,7 @@
+services:
+  artifact:
+    image: artifactrepo:8.12.2-1
+    ports:
+      - "443:443"
+    volumes:
+      - ./certs/:/usr/share/nginx/certs/:ro
