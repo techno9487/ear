@@ -3,7 +3,8 @@ echo Currently Supports 'elastic-agent' 'heartbeat' 'filebeat' 'packetbeat' 'aud
 
 cd /usr/share/nginx/html
 
-version='8.12.2'
+version='8.16.2'
+
 arch=('windows' 'linux')
 app=('elastic-agent/elastic-agent' 'heartbeat/heartbeat' 'filebeat/filebeat' 'packetbeat/packetbeat' 'auditbeat/auditbeat' 'osquerybeat/osquerybeat' )
 artifact_type=('fleet-server/fleet-server' 'cloudbeat/cloudbeat' 'endpoint-dev/endpoint-security' 'apm-server/apm-server' 'prodfiler/pf-host-agent' 'prodfiler/pf-elastic-collector' 'prodfiler/pf-elastic-symbolizer' )
@@ -15,7 +16,7 @@ do
       do
         file=zip
         echo $file
-        echo "$platform"
+        echo "$platform + $version"
         curl https://artifacts.elastic.co/downloads/beats/$app-$version-$platform-x86_64.$file --create-dirs --output downloads/beats/$app-$version-$platform-x86_64.$file
         curl https://artifacts.elastic.co/downloads/beats/$app-$version-$platform-x86_64.$file.sha512 --create-dirs --output downloads/beats/$app-$version-$platform-x86_64.$file.sha512
         curl https://artifacts.elastic.co/downloads/beats/$app-$version-$platform-x86_64.$file.asc --create-dirs --output downloads/beats/$app-$version-$platform-x86_64.$file.asc
@@ -60,4 +61,4 @@ do
 done
 
 
-export ENDPOINT_VERSION=8.12.2 && wget -P downloads/endpoint/manifest https://artifacts.security.elastic.co/downloads/endpoint/manifest/artifacts-$version.zip && zcat -q downloads/endpoint/manifest/artifacts-$version.zip | jq -r '.artifacts | to_entries[] | .value.relative_url' | xargs -I@ curl "https://artifacts.security.elastic.co@" --create-dirs -o ".@"
+export ENDPOINT_VERSION=$version && wget -P downloads/endpoint/manifest https://artifacts.security.elastic.co/downloads/endpoint/manifest/artifacts-$version.zip && zcat -q downloads/endpoint/manifest/artifacts-$version.zip | jq -r '.artifacts | to_entries[] | .value.relative_url' | xargs -I@ curl "https://artifacts.security.elastic.co@" --create-dirs -o ".@"

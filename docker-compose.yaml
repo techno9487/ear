@@ -1,7 +1,8 @@
 services:
   artifact:
-    image: artifactrepo:8.12.2-1
+    image: ear:latest
     ports:
-      - "443:443"
+      - "8443:443"
     volumes:
       - ./certs/:/usr/share/nginx/certs/:ro
+      - ./ece-image:/opt/ece-images/:rw
