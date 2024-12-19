@@ -15,4 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build --pull --rm -f artifact.Dockerfile -t ear:8.17.0 .
+      run: docker build --pull --rm -f artifact.Dockerfile -t ghcr.io/charliek17/ear:8.17.0 .
+
+    - name: Push the Docker image
+      run: docker push ghcr.io/charliek17/ear:8.17.0
