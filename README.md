@@ -2,9 +2,11 @@
 # Elastic Artifact Registry 
 Pre-Packaged at GitHub:
 
-docker pull charliek17/ear:8.15.2
+docker pull charliek17/ear:<VERSION>
 
 Nginx based container that serves Elastic Artifacts within an airgapped envrioment. 
+
+## Container aligns to Elastic Releases 
 
 
 # Using Docker
@@ -25,7 +27,7 @@ Before you begin, ensure you have the following installed on your system:
 
 Example Build command:
 
-''' docker build --pull --rm -f "artifact.Dockerfile" -t ear:8.15.2 "." '''
+''' docker build --pull --rm -f "artifact.Dockerfile" -t ear:latest "." '''
 
 # Import image into envrioment
 
