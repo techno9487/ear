@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed on your system:
 
 Example Build command:
 
-''' docker build --pull --rm -f "artifact.Dockerfile" -t artifactrepo:8.15.2 "." '''
+''' docker build --pull --rm -f "artifact.Dockerfile" -t ear:8.15.2 "." '''
 
 # Import image into envrioment
 
