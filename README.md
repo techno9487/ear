@@ -1,8 +1,8 @@
 ```markdown
 # Elastic Artifact Registry 
-Pre-Packaged at Docker Hub:
+Pre-Packaged at GitHub:
 
-docker pull charliek17/ear:8.12.2
+docker pull charliek17/ear:8.15.2
 
 Nginx based container that serves Elastic Artifacts within an airgapped envrioment. 
 
@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed on your system:
 
 Example Build command:
 
-''' docker build --pull --rm -f "artifact.Dockerfile" -t artifactrepo:8.12.2-1 "." '''
+''' docker build --pull --rm -f "artifact.Dockerfile" -t artifactrepo:8.15.2 "." '''
 
 # Import image into envrioment
 
@@ -37,6 +37,6 @@ Example Build command:
 Run docker compose:
 '''docker compose -f "docker-compose.yaml" up -d'''
 
-EAR should be listening on 443
+EAR should be listening on 8443
 
 

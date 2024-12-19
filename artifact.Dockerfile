@@ -9,7 +9,7 @@ COPY nginx.conf /etc/nginx/conf.d/nginx.conf
 COPY bash.sh /opt/bash.sh
 #COPY EMS_PLANTTILES.sh /opt/EMS_PLANTTILES.sh
 #COPY ece_image_pull.sh /opt/ece_image_pull.sh
-COPY ece-images /opt/ece-images
+#COPY ece-images /opt/ece-images
 #RUN ["chmod", "+x", "/opt/EMS_PLANTTILES.sh"]
 #RUN ["chmod", "+x", "/opt/ece_image_pull.sh"]
 RUN ["chmod", "+x", "/opt/bash.sh"]
