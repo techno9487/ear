@@ -3,7 +3,7 @@ echo Currently Supports 'elastic-agent' 'heartbeat' 'filebeat' 'packetbeat' 'aud
 
 cd /usr/share/nginx/html
 
-version='8.15.2'
+version='8.17.0'
 
 arch=('windows' 'linux')
 app=('elastic-agent/elastic-agent' 'heartbeat/heartbeat' 'filebeat/filebeat' 'packetbeat/packetbeat' 'auditbeat/auditbeat' 'osquerybeat/osquerybeat' )
