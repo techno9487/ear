@@ -3,10 +3,10 @@ echo Currently Supports 'elastic-agent' 'heartbeat' 'filebeat' 'packetbeat' 'aud
 
 cd /usr/share/nginx/html
 
-version='8.17.1'
+version='8.17.2'
 
 arch=('windows' 'linux')
-app=('elastic-agent/elastic-agent' 'heartbeat/heartbeat' 'filebeat/filebeat' 'packetbeat/packetbeat' 'auditbeat/auditbeat' 'osquerybeat/osquerybeat' )
+app=('heartbeat/heartbeat' 'elastic-agent/elastic-agent' 'filebeat/filebeat' 'packetbeat/packetbeat' 'auditbeat/auditbeat' 'osquerybeat/osquerybeat' )
 artifact_type=('fleet-server/fleet-server' 'cloudbeat/cloudbeat' 'endpoint-dev/endpoint-security' 'apm-server/apm-server' 'prodfiler/pf-host-agent' 'prodfiler/pf-elastic-collector' 'prodfiler/pf-elastic-symbolizer' )
 for platform in "${arch[@]}"
 do
